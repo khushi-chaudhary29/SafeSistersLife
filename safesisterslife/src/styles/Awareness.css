@@ -1,0 +1,74 @@
+.awareness-section {
+  /* background-color: #ffe6e9; Baby pink background */
+  padding: 4rem 5%;
+  max-width: 1200px; /* Set a max width for larger screens */
+  margin: 0 auto; /* Center align */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.awareness-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between; /* Adjust spacing for better alignment */
+}
+
+.awareness-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.awareness-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+.awareness-content h2 {
+  font-size: 2rem;
+  color: #b565a5;
+  margin-bottom: 1rem;
+}
+
+.awareness-content p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+/* Full-width image on smaller screens */
+@media (max-width: 1024px) {
+  .awareness-section {
+    padding: 2rem 2%; /* Adjust padding for smaller screens */
+  }
+
+  .awareness-item {
+    flex-direction: column; /* Stack items on top of each other */
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .awareness-item.reverse {
+    flex-direction: column;
+  }
+
+  .awareness-image img {
+    width: 100vw; /* Full viewport width */
+    max-width: none; /* Allow it to span the entire screen width */
+    border-radius: 0; /* Remove border-radius for a cleaner edge-to-edge look */
+    margin: 0 -2%; /* Negative margin to align with the edges */
+  }
+
+  .awareness-content h2 {
+    font-size: 1.8rem;
+    color: #b565a5;
+    margin-bottom: 1rem;
+  }
+
+  .awareness-content p {
+    font-size: 1rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+}
