@@ -19,12 +19,21 @@
   flex-direction: row-reverse;
 }
 
+.awareness-image {
+  width: 100%;
+  max-width: 400px; /* Set a max width for consistency */
+  aspect-ratio: 4 / 3; /* Set a consistent aspect ratio */
+  overflow: hidden; /* Hide overflow if images don’t match aspect ratio */
+}
+
 .awareness-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain; /* Display full image without cropping */
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
+
 .awareness-content h2 {
   font-size: 2rem;
   color: #b565a5;
@@ -37,7 +46,7 @@
   line-height: 1.6;
 }
 
-/* Full-width image on smaller screens */
+/* Responsive design adjustments */
 @media (max-width: 1024px) {
   .awareness-section {
     padding: 2rem 2%; /* Adjust padding for smaller screens */
@@ -53,11 +62,18 @@
     flex-direction: column;
   }
 
+  .awareness-image {
+    width: 90vw; /* Make the image width responsive for mobile */
+    max-width: none;
+    aspect-ratio: 4 / 3; /* Keep aspect ratio */
+  }
+
   .awareness-image img {
-    width: 100vw; /* Full viewport width */
-    max-width: none; /* Allow it to span the entire screen width */
-    border-radius: 0; /* Remove border-radius for a cleaner edge-to-edge look */
-    margin: 0 -2%; /* Negative margin to align with the edges */
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Show full image without cropping */
+    border-radius: 5px; /* Reduce border-radius for a cleaner mobile look */
+    margin: 0; /* Align image edges with the content */
   }
 
   .awareness-content h2 {
@@ -70,5 +86,20 @@
     font-size: 1rem;
     color: #4a4a4a;
     line-height: 1.6;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 600px) {
+  .awareness-image {
+    width: 100%; /* Full-width on very small screens */
+  }
+
+  .awareness-content h2 {
+    font-size: 1.6rem; /* Slightly smaller heading font for small screens */
+  }
+
+  .awareness-content p {
+    font-size: 0.95rem; /* Smaller font for paragraph text on small screens */
   }
 }
