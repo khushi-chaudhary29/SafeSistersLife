@@ -1,333 +1,72 @@
-@import url(App.css);
-
+/* Navbar styles */
 nav {
-  border-bottom: 1px solid rgba(28, 73, 128, 0.1);
-  height: 53px;
+  border-bottom: 2px solid rgba(220, 110, 110, 0.2);
+  height: 70px;
   position: sticky;
   top: 0;
   z-index: 10;
   background-color: white;
 }
 
-.mobile-nav {
-  display: none;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5%;
   height: 100%;
-  gap: 2rem;
 }
 
-.nav-left {
+/* Logo styling */
+.nav-logo {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-left: -4rem;
 }
 
-.nav-img {
-  display: flex;
+.nav-logo img {
+  height: 62px; /* Increase logo size */
+  /* filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2)); */
 }
 
-.nav-img img {
-  height: 32px;
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #b1349e; /* Deep red for classical feel */
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.nav-img span {
-  border-left: 1px solid rgba(39, 73, 125, 0.5);
-  font-size: 10px;
-  margin-left: 5px;
-  padding: 5px;
-}
-
-.nav-img strong {
-  font-size: 11px;
-  font-weight: 500;
-}
-
-.nav-search {
-  position: relative;
-
-}
-
-.nav-search svg {
-  position: absolute;
-  top: 29%;
-  left: 4%;
-}
-
-.nav-search input {
-  border: 1px solid rgba(28, 73, 128, 0.1);
-  padding: 9px 9px 9px 34px;
-  border-radius: 19px;
-  color: var(--primary-color);
-  width: 250px;
-}
-
-::placeholder {
-  color: var(--primary-color);
-}
-
-:-ms-input-placeholder,
-::-ms-input-placeholder {
-  color: var(--primary-color);
-}
-
-.nav-right {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.nav-tabs,
-.mobile-nav-tabs {
+/* Centered Navigation Links */
+.nav-links {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
 
-.nav-tabs > div a,
-.mobile-nav-tabs > div a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
- 
-}
-
-.nav-tabs > div a:before,
-.mobile-nav-tabs > div a:before {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--secondary-color);
-  transform: scale(0);
-  transition: all 0.4s ease;
-}
-
-.nav-tabs > div a:hover,
-.mobile-nav-tabs > div a:hover {
-  color: var(--secondary-color);
-}
-.nav-tabs > .tab-name span :hover{
-  color: var(--secondary-color);
-}
-
-.nav-tabs > div a:hover:before,
-.active:before {
-  transform: scale(1) !important;
-}
-.nav-tabs .tab-name{
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    color: #222222;
-    text-transform: capitalize;
-}
-.Internship-tab:hover .tab-name{
-    /* color: var(--secondary-color); */
-    background-color:#8abcee;
-    border-radius: 5px;
-    padding: 6px;
-    cursor: pointer;
-  }
-  .job-tab:hover .tab-name{
-    color: var(--secondary-color);
-    cursor: pointer;
-  }
-  .compete-tab:hover .tab-name{
-    color: var(--secondary-color);
-    cursor: pointer;
-  }
-  .mentorship-tab:hover .tab-name{
-    color: var(--secondary-color);
-    cursor: pointer;
-  }
-  .courses-tab:hover .tab-name{
-    color: var(--secondary-color);
-    cursor: pointer;
-  }
-  .practice-tab:hover .tab-name{
-    color: var(--secondary-color);
-    cursor: pointer;
-  }
-
-.tab-icon {
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-  background: url(https://d8it4huxumps7.cloudfront.net/uploads/images/menu/menu-spirit-icons.svg)
-    no-repeat;
-}
-/* .active span {
-  color: var(--secondary-color);
-}
-
-.active .tab-icon {
-  background-position-x: -34px;
-} */
-
-.nav-btns {
-  display: flex;
-  align-items: center;
-  margin-left: 1rem;
-  gap: 1rem;
-  justify-content: space-between;
-}
-
-.nav-btns button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.host-btn,
-.login-btn {
-  height: 34px;
-  border-radius: 50px ;
-  justify-content: center;
-  color: #fff;
+.nav-links a {
+  font-size: 1.1rem;
   font-weight: 500;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.3s;
-  padding: 0 14px;
-  border: none;
-}
-.login-btn{
-    background-color: #0568cb;
-    
+  text-decoration: none;
+  color: #dd21d6; /* Pink color */
+  font-family: 'Garamond', serif;
+  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
-.host-btn {
-  background-color: #FFFFFF;
-  color: #383838;
-  border: 1px solid #718EB0;
-  border-radius: 18px;
+.nav-links a:hover {
+  color: #6f185e; /* Slightly darker pink on hover */
 }
 
-.business-btn {
-  background-color:#FFEFBD;
-  color:#383838;
-  border: 1px solid #FFD74C;
-  border-radius: 18px;
-  width: 100%;
-  padding: 6px;
-  font-weight: 400;
-}
-.host-btn img {
-    filter: brightness(2) invert(1);
-    height: 20px;
-  }
-
-.business-btn img {
-    filter: brightness(4) invert(1);
-    height: 20px;
-  }
-
-  
-.login-btn img {
-  filter: brightness(0) invert(1);
-  height: 14px;
-}
-.login-btn:hover{
-    background-color: #15599d;
-}
-.host-btn:hover{
-    background-color: #dad9d9;
-}
-.business-btn:hover{
-    background-color: #ffe175;
-}
-
-
-@media (max-width: 1100px) {
-  .mobile-nav {
-    padding: 0.5rem 0 1rem 0;
-    display: block;
-    width: 100%;
-    position: sticky;
-    bottom: 0%;
-    z-index: 10;
-    background-color: white;
-    box-shadow: 0 0 5px rgba(11, 74, 116, 0.176);
-  }
-  .mobile-nav-tabs {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .navbar {
-    width: 99%;
+    flex-direction: column;
+    gap: 1rem;
   }
-  .nav-search input {
-    width: 100%;
+  .nav-logo img {
+    height: 40px;
   }
-  .nav-img span {
-    display: none;
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
   }
-  .nav-search {
-    display: none;
-  }
-  .nav-tabs {
-    display: none;
-  }
-}
-@media (max-width: 950px){
-  .mobile-nav {
-    padding: 0.5rem 0 1rem 0;
-    display: block;
-    width: 100%;
-    position: sticky;
-    bottom: 0%;
-    z-index: 10;
-    background-color: white;
-    box-shadow: 0 0 5px rgba(11, 74, 116, 0.176);
-  }
-  .mobile-nav-tabs {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .navbar {
-    width: 99%;
-  }
-  .nav-search input {
-    width: 100%;
-  }
-  .nav-img span {
-    display: none;
-  }
-  .nav-search {
-    display: none;
-  }
-  .nav-tabs {
-    display: none;
-  }
-  .login-btn .tab-name{
-    width: 20px;
-    font-size: 10px;
-  }
-  .host-btn span{
-    width: 30px;
-    font-size: 15px;
-  }
-  .business-btn span{
-    width: 70px;
-    font-size: 12px;
-    height: 20px;
-  }
-
-
-
 }

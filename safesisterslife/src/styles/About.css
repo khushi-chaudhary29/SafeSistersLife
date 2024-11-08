@@ -1,0 +1,73 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  padding: 2rem 5%; /* Reduced padding for a smaller section */
+  background-color: #f2e4f0;
+}
+
+.about-image {
+  flex: 1;
+  padding-right: 1.5rem;
+}
+
+.about-image img {
+  width: 79%; /* Ensures the image fills its container */
+  height: auto;
+  max-height: 400px; /* Reduced max height for smaller section */
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.about-content {
+  flex: 1;
+  padding-left: 1.5rem;
+}
+
+.about-content h2 {
+  font-size: 2rem; /* Reduced font size */
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.about-content p {
+  font-size: 1rem; /* Reduced font size */
+  color: #4a4a4a;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 3%; /* Further reduce padding on smaller screens */
+  }
+
+  .about-image {
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content {
+    padding: 0;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+  }
+
+  .about-content p {
+    font-size: 0.95rem; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content h2 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .about-content p {
+    font-size: 0.9rem;
+  }
+}
